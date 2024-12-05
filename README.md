@@ -1,4 +1,4 @@
-Funcionalidad de Cada Opción del Chatbot
+-Funcionalidad de Cada Opción del Chatbot
 Este chatbot permite realizar varias acciones. A continuación, se describen las opciones y los endpoints esperados:
 
 1. Obtener Tickets: Recupera una lista de tickets. Endpoint esperado: /api/tickets.
