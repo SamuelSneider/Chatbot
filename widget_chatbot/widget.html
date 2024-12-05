@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="models/chatbox.js"></script>
+    <script src="models/menuOpciones.js"></script>
+    <script src="models/obtenerTickets.js"></script>
+    <script src="models/crearIM.js"></script>
+    <script src="models/menuPrincipal.js"></script>
+    <script src="models/consultaSD.js"></script>
+    <script src="models/ejecucionParametros.js"></script>
+    <script src="models/crearRequerimiento.js"></script>
+    <script src="models/consultaRequerimientos.js"></script>
+    <script src="models/contactenos.js"></script>
+</head>
+<body>
+    <header id="main-header">
+        <span class="header-icon"><i class="fas fa-home"></i></span>
+        <span class="header-title">Inicio</span>
+    </header>
+
+      <div id="whatsapp-icon" onclick="toggleChatbox()">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+    
+    <div id="chat-widget" style="display: none;">
+        <div id="chatbox-header">
+            <span class="icon">
+                <i class="fas fa-robot"></i>
+                <span class="chat-title">Asistente Virtual</span> 
+            </span>
+            <i class="fas fa-times" id="close-chatbox" onclick="toggleChatbox()"></i>
+        </div>
+        
+        <div id="chatbox">
+            <div id="messages">
+                <div id="welcome-message" class="message chatbot">
+                    <span class="icon"><i class="fas fa-robot"></i></span>
+                    <span class="bubble">Bienvenido a su asistente virtual.</span>
+                </div>
+            </div>
+            
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Escribe un mensaje...">
+                <button onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i> 
+                </button>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="primeraOpcion" style="display: none;">
+        <div class="message chatbot">
+            <span class="icon"><i class="fas fa-robot"></i></span>
+            <span class="bubble">Tenemos las siguientes consultas, ¿cuál deseas escoger?</span>
+        </div>
+        <div id="options-menu" class="options-menu">
+            <button class="option-button" onclick="handleOptionClick('Obtener Tickets')">Obtener Tickets</button>
+            <button class="option-button" onclick="handleOptionClick('Consulta SD')">Consulta SD</button>
+            <button class="option-button" onclick="handleOptionClick('Crear IM')">Crear IM</button>
+            <button class="option-button" onclick="handleOptionClick('Menu Principal')">Menu Principal</button>
+            <button class="option-button" onclick="handleOptionClick('Consulta Requerimientos')">Consulta Requerimientos</button>
+            <button class="option-button" onclick="handleOptionClick('Crear Requerimiento')">Crear Requerimiento</button>
+            <button class="option-button" onclick="handleOptionClick('Contactenos')">Contactenos</button>
+            <button class="option-button" onclick="handleOptionClick('Ejecución de parametros')">Ejecución de parametros</button>
+        </div>
+    </div>
+    
+      
+</body>
+</html>

@@ -1,0 +1,224 @@
+ 
+body {
+    background-color: #021B41; 
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+#main-header {
+    display: flex;
+    align-items: center;
+    padding: 35px;
+    background-color: #002863; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+     gap: 0px;
+     opacity: 0px;
+}
+.header-title {
+    color: white; 
+    font-size: 28px; 
+}
+.header-icon i {
+    font-size: 38px; 
+    color: black; 
+    margin-right: 10px; 
+}
+
+
+
+#whatsapp-icon {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: white;
+    color: #25D366;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    transition: background-color 0.3s;
+}
+
+#chatbox-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #021B41;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+#whatsapp-icon:hover {
+    background-color: #3d875b;
+}
+
+#chat-widget {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 350px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#chatbox {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    background: #f9f9f9;
+}
+
+#messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.message {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+.message.user {
+    justify-content: flex-end; 
+    text-align: right;
+    align-items: flex-end; 
+
+}
+
+.message.chatbot {
+    justify-content: flex-start; 
+    text-align: left;
+    align-items: flex-start; 
+}
+
+.message .icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 5px; 
+}
+
+.user .icon {
+    background-color: #58619a;
+    border-radius: 50%;
+}
+
+.chatbot .icon {
+    background-color: #007BFF;
+    border-radius: 50%;
+}
+
+.message .bubble {
+    background-color: #e0e0e0;
+    color: #333;
+    border-radius: 15px;
+    padding: 8px 12px;
+    max-width: 70%;
+    word-break: break-word;
+    white-space: pre-wrap;
+}
+
+.message.user .bubble { 
+    background-color: #a8aaeb;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px 0;
+    display: inline-block;
+    max-width: 40%; /* Ajusta el porcentaje según el tamaño deseado */
+    word-wrap: break-word;
+}
+
+
+.message.chatbot .bubble {
+    background-color: #e0e0e0;
+    color: #333;
+    border-radius: 15px 15px 15px 15px; 
+}
+
+#user-input {
+    border: 1px solid #cccccc;  
+    outline: none;              
+    padding: 10px;
+    width: calc(100% - 80px);
+    flex: 1;                    
+    font-size: 16px;
+    border-radius: 14px;  
+    margin: 4px;                
+
+}
+
+
+
+button {
+    width: 60px;
+    padding: 10px;
+    border: none;
+    color: none;
+    cursor: pointer;
+    margin-left: 10px;           
+    cursor: pointer; 
+    margin: 1px;                
+
+}
+button i {
+    color: #000000; 
+    margin-right: 5px; 
+    font-size: 16px;           
+
+}
+
+.options-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.option-button {
+    background-color: #5095ae;
+    color: white;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del botón */
+
+}
+
+.option-button:hover {
+    background-color: #293769;
+}
+
+
+.input-container {
+    display: flex;               
+    align-items: center;         
+    margin-top: 10px;; 
+}
