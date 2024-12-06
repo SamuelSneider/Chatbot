@@ -116,10 +116,36 @@ function authenticateUser() {
         .then((result) => {
             if (result.code === "0" && result.results.success) {
                 displayMessage(`Autenticación exitosa: ${result.results.message}`, "chatbot");
+                // Desplegar la vista de botones de menú
+                // Obtener el menú de opciones y agregarlo al chat
+                const messagesContainer = document.getElementById("messages");
+                const optionsMenu = document.getElementById("options-menu");
+                            
+                if (optionsMenu) {
+                    // Clonar el contenido del menú de opciones para evitar mover el original
+                    const clonedMenu = optionsMenu.cloneNode(true);
+                    clonedMenu.style.display = "flex"; // Asegúrate de que esté visible
+                    clonedMenu.id = ""; // Elimina el ID para evitar conflictos
+                
+                    // Crear un contenedor para el menú dentro del chat
+                    const optionsMessage = document.createElement("div");
+                    optionsMessage.classList.add("message", "chatbot");
+                
+                    const iconSpan = document.createElement("span");
+                    iconSpan.classList.add("icon");
+                    iconSpan.innerHTML = '<i class="fas fa-robot"></i>';
+                
+                    optionsMessage.appendChild(iconSpan);
+                    optionsMessage.appendChild(clonedMenu);
+                
+                    messagesContainer.appendChild(optionsMessage);
+                
+                    // Mantener el scroll al final
+                    messagesContainer.scrollTop = messagesContainer.scrollHeight;
             } else {
                 displayMessage(`Error en la autenticación: ${result.desc}`, "chatbot");
             }
-        })
+        }})
         .catch((error) => {
             console.error(error);
             displayMessage("Ocurrió un error al intentar autenticar. Inténtalo de nuevo más tarde.", "chatbot");

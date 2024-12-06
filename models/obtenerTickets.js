@@ -1,4 +1,14 @@
+export function manejarObtenerTickets() {
+    console.log("Lógica para 'Obtener Tickets' ejecutada.");
+    const messagesContainer = document.getElementById("messages");
 
-function handleGetTickets(message) {
-    return "Tus datos aparecen en la base de datos y se registra la siguiente información: ";
+    const messageElement = document.createElement("div");
+    messageElement.classList.add("message", "chatbot");
+    messageElement.innerHTML = `
+        <span class="icon"><i class="fas fa-robot"></i></span>
+        <span class="bubble">Aquí tienes los tickets disponibles...</span>
+    `;
+
+    messagesContainer.appendChild(messageElement);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
